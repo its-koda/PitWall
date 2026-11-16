@@ -1,0 +1,560 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+body {
+    background-color: #0b0b10;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+/* TOPBAR */
+.topbar {
+    background-color: #0b0b10;
+    border-bottom: 1px solid #1a1a24;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.topbar-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-logo {
+    font-size: 1.5rem;
+    font-weight: 900;
+    font-style: italic;
+    color: #ffffff;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.btn-logo span { color: #e10600; }
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.btn-option {
+    color: #8f92a1;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: color 0.2s;
+}
+
+.btn-option:hover { color: #ffffff; }
+
+.btn-buy {
+    background-color: #e10600;
+    color: #ffffff;
+    padding: 10px 20px;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 0.85rem;
+    text-decoration: none;
+    border-radius: 2px;
+}
+
+/* HERO SECTION */
+.hero-section {
+    position: relative;
+    background-color: #0b0b10;
+    padding-top: 40px;
+}
+
+.hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    align-items: center;
+}
+
+.hero-location {
+    color: #e10600;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: 900;
+    font-style: italic;
+    line-height: 0.95;
+    margin-bottom: 20px;
+}
+
+.highlight-red { color: #e10600; }
+
+.hero-description {
+    color: #8f92a1;
+    font-size: 1rem;
+    max-width: 420px;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-primary {
+    background-color: #e10600;
+    color: #ffffff;
+    padding: 14px 24px;
+    font-weight: 900;
+    font-style: italic;
+    text-decoration: none;
+    border-radius: 2px;
+}
+
+.btn-secondary {
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    padding: 14px 24px;
+    font-weight: 900;
+    font-style: italic;
+    text-decoration: none;
+    border-radius: 2px;
+}
+
+.hero-banner-wrapper {
+    position: relative;
+}
+
+.hero-banner-clip {
+    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+    border-left: 4px solid #e10600;
+    overflow: hidden;
+    height: 420px;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-stats {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    gap: 30px;
+    background: rgba(11, 11, 16, 0.8);
+    backdrop-filter: blur(5px);
+    padding: 15px 25px;
+    border-radius: 4px;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-number {
+    font-size: 1.8rem;
+    font-weight: 900;
+    font-style: italic;
+}
+
+.stat-label {
+    font-size: 0.65rem;
+    color: #8f92a1;
+    font-weight: 700;
+}
+
+/* ZEBRADO DE INTERLAGOS */
+.curb-strip {
+    height: 14px;
+    margin-top: 30px;
+    background: repeating-linear-gradient(
+        -45deg,
+        #ffffff,
+        #ffffff 15px,
+        #e10600 15px,
+        #e10600 30px
+    );
+}
+
+/* ESTRUTURA GERAL */
+.main-content {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 900;
+    font-style: italic;
+    margin-bottom: 25px;
+}
+
+.step-num { color: #e10600; margin-right: 6px; }
+
+/* 01. CARDS DO GRID */
+.drivers-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.driver-card {
+    background-color: #121218;
+    border-top: 4px solid #ffffff;
+    padding: 20px;
+    border-radius: 4px;
+    position: relative;
+}
+
+.card-ferrari { border-color: #e10600; }
+.card-mclaren { border-color: #ff8000; }
+.card-mercedes { border-color: #00d2be; }
+.card-audi { border-color: #ffffff; }
+
+.driver-number {
+    font-size: 3.5rem;
+    font-weight: 900;
+    font-style: italic;
+    color: #23232e;
+    line-height: 1;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.card-ferrari .driver-number { color: #5a141a; }
+.card-mclaren .driver-number { color: #593510; }
+.card-mercedes .driver-number { color: #104240; }
+
+.driver-info h3 {
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.driver-info p {
+    font-size: 0.8rem;
+    color: #8f92a1;
+    margin-top: 2px;
+}
+
+/* 02. TABELA DE CLASSIFICAÇÃO */
+.filter-bar {
+    display: flex;
+    gap: 15px;
+    align-items: flex-end;
+    margin-bottom: 20px;
+}
+
+.filter-group { display: flex; flex-direction: column; gap: 6px; }
+.filter-group label { font-size: 0.75rem; font-weight: 700; color: #8f92a1; }
+.filter-group input, .filter-group select {
+    background-color: #121218;
+    border: 1px solid #23232e;
+    border-radius: 4px;
+    padding: 10px 14px;
+    color: #fff;
+    min-width: 250px;
+}
+
+.btn-filter {
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    padding: 10px 24px;
+    font-weight: 700;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.table-container {
+    background-color: #121218;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+table { width: 100%; border-collapse: collapse; text-align: left; }
+thead th {
+    background-color: #16161f;
+    color: #7b7e8d;
+    font-size: 0.75rem;
+    padding: 16px 20px;
+    border-bottom: 1px solid #1f1f2b;
+}
+
+tbody tr { border-bottom: 1px solid #1a1a24; }
+tbody tr.leader { background-color: #1d1215; }
+td { padding: 14px 20px; font-size: 0.95rem; color: #cfd2dc; }
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    background-color: #ffffff;
+    color: #000;
+    font-weight: 900;
+    border-radius: 2px;
+}
+
+.badge.pos-1 { background-color: #e10600; color: #ffffff; }
+
+.driver-name { display: flex; align-items: center; gap: 10px; font-weight: 600; color: #ffffff; }
+.team-bar { width: 4px; height: 16px; border-radius: 2px; }
+.team-bar.mclaren { background-color: #ff8000; }
+.team-bar.ferrari { background-color: #e10600; }
+.team-bar.mercedes { background-color: #00d2be; }
+.team-bar.audi { background-color: #a6a6a6; }
+.points { font-weight: 900; color: #ffffff; }
+
+/* 03. INGRESSOS */
+.tickets-container {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 40px;
+}
+
+.tickets-subtitle { color: #8f92a1; font-size: 0.95rem; margin-bottom: 20px; }
+
+.alert-box {
+    background-color: #1a1708;
+    border-left: 3px solid #d4a300;
+    color: #d4a300;
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.price-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 0;
+    border-bottom: 1px solid #1a1a24;
+}
+
+.sector-price { color: #e10600; font-weight: 700; }
+
+.tickets-form-card {
+    background-color: #121218;
+    border-top: 3px solid #e10600;
+    border-radius: 4px;
+    padding: 30px;
+}
+
+form { display: flex; flex-direction: column; gap: 18px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+.form-group { display: flex; flex-direction: column; gap: 6px; }
+.form-group.full-width { grid-column: span 2; }
+label { font-size: 0.75rem; font-weight: 700; color: #8f92a1; }
+input, select, textarea {
+    background-color: #0b0b10;
+    border: 1px solid #23232e;
+    border-radius: 4px;
+    padding: 10px 14px;
+    color: #ffffff;
+    font-size: 0.9rem;
+}
+
+.field-hint { font-size: 0.75rem; color: #5d606e; }
+
+.btn-submit {
+    background-color: #e10600;
+    color: #ffffff;
+    border: none;
+    padding: 14px;
+    font-size: 1rem;
+    font-weight: 900;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.footer {
+    border-top: 1px solid #1a1a24;
+    text-align: center;
+    padding: 25px;
+    font-size: 0.8rem;
+    color: #5d606e;
+}
+
+.footer span { color: #e10600; }
+
+/* 04. RESPONSIVIDADE */
+
+/* Tablets e telas médias (até 992px) */
+@media (max-width: 992px) {
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .hero-title {
+        font-size: 3.2rem;
+    }
+
+    .hero-banner-clip {
+        clip-path: none;
+        /* Remove o corte diagonal que espreme a imagem em telas menores */
+        border-left: none;
+        border-top: 4px solid #e10600;
+        height: 340px;
+        border-radius: 4px;
+    }
+
+    .drivers-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 cards por linha em vez de 4 */
+    }
+
+    .tickets-container {
+        grid-template-columns: 1fr;
+        /* Empilha preços e formulário */
+        gap: 30px;
+    }
+}
+
+/* Celulares (até 768px) */
+@media (max-width: 768px) {
+
+    /* Topbar */
+    .topbar-content {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .nav-links {
+        order: 3;
+        /* Joga os links para a linha de baixo */
+        width: 100%;
+        justify-content: space-between;
+        gap: 10px;
+        padding-top: 10px;
+        border-top: 1px solid #1a1a24;
+    }
+
+    /* Hero */
+    .hero-section {
+        padding-top: 25px;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        text-align: center;
+        width: 100%;
+    }
+
+    .hero-banner-clip {
+        height: 260px;
+    }
+
+    .hero-stats {
+        position: static;
+        /* Tira de cima da imagem para não cobrir o carro */
+        margin-top: 12px;
+        justify-content: space-around;
+        gap: 15px;
+        padding: 12px 15px;
+        border: 1px solid #1a1a24;
+    }
+
+    .stat-number {
+        font-size: 1.4rem;
+    }
+
+    /* Espaçamento geral */
+    .main-content {
+        margin: 35px auto;
+        gap: 50px;
+    }
+
+    .section-title {
+        font-size: 1.6rem;
+    }
+
+    /* Filtros da tabela */
+    .filter-bar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filter-group input,
+    .filter-group select,
+    .btn-filter {
+        min-width: 100%;
+        width: 100%;
+    }
+
+    /* Tabela com rolagem horizontal suave para não quebrar a tela */
+    .table-container {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    table {
+        min-width: 550px;
+    }
+
+    td,
+    thead th {
+        padding: 12px 14px;
+        font-size: 0.85rem;
+    }
+
+    /* Formulário de ingressos */
+    .tickets-form-card {
+        padding: 20px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        /* Campos em uma única coluna */
+    }
+
+    .form-group.full-width {
+        grid-column: span 1;
+    }
+}
+
+/* Celulares pequenos (até 480px) */
+@media (max-width: 480px) {
+    .drivers-grid {
+        grid-template-columns: 1fr;
+        /* 1 card por linha */
+    }
+
+    .hero-title {
+        font-size: 2.1rem;
+    }
+
+    .nav-links {
+        font-size: 0.75rem;
+        gap: 8px;
+    }
+}
